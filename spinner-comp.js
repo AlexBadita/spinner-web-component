@@ -2,6 +2,7 @@ const template = document.createElement("template");
 template.innerHTML = `
     <style>
         .center {
+            z-index: 1000;
             top: 0;
             bottom: 0;
             left: 0;
@@ -58,9 +59,9 @@ class SpinnerComp extends HTMLElement {
         const shadow = this.attachShadow({ mode: "open" });
         shadow.appendChild(template.content.cloneNode(true));
 
-        this.initCircleColor();
-        this.initSpinnerColor();
         window.addEventListener("load", (event) => {
+            this.initCircleColor();
+            this.initSpinnerColor();
             this.initSize();
             this.initWidth();
             this.initVisibility();
