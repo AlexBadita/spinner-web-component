@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="spinner-comp.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Trigger Big Spinner</button>
+    <spinner-comp class="sp1" duration="4">Loading...</spinner-comp>
+
+    <div class="container">
+        <spinner-comp class="sp2" active="false" spinnerColor="red"></spinner-comp>
+    </div>
+    <button id="btn2">Trigger Small Spinner</button>
+
+    <script>
+        const btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", () => {
+            document.querySelector(".sp1").showSpinner();
+        });
+
+        const btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click", () => {
+            document.querySelector(".sp2").showSpinner();
+        });
+    </script>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: lightgray;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            margin-left: 20px;
+        }
+
+        #btn1, #btn2{
+            margin: 20px;
+            font-size: 20px;
+        }
+    </style>
+</body>
+</html>
