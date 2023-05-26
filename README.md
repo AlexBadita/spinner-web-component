@@ -4,6 +4,13 @@ A web component that displys a spinner and blocks all interactions with the rest
 It requires `jQuery` to work.
 
 ## Usage
+Adding the component to a project:
+```html
+<head>
+  <script src="spinner-comp.js"></script>
+</head>
+```
+
 To cover the entire application it's sufficient to add the following code inside the `body`:
 ```html
 <!-- Displaying the spinner -->
