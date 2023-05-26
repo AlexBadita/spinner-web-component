@@ -17,16 +17,27 @@
         <spinner-comp class="sp2" active="false" spinnerColor="red"></spinner-comp>
     </div>
     <button id="btn2">Trigger Small Spinner</button>
+    <button id="btn3">Stop Small Spinner</button>
 
     <script>
+        const spinner1 = document.querySelector(".sp1");
+
         const btn1 = document.getElementById("btn1");
         btn1.addEventListener("click", () => {
-            document.querySelector(".sp1").showSpinner();
+            spinner1.showSpinner();
         });
+
+
+        const spinner2 = document.querySelector(".sp2");
 
         const btn2 = document.getElementById("btn2");
         btn2.addEventListener("click", () => {
-            document.querySelector(".sp2").showSpinner();
+            spinner2.showSpinner();
+        });
+
+        const btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click", () => {
+            spinner2.hideSpinner();
         });
     </script>
 
@@ -47,9 +58,10 @@
             margin-left: 20px;
         }
 
-        #btn1, #btn2{
+        #btn1, #btn2, #btn3{
             margin: 20px;
             font-size: 20px;
+            display: block;
         }
     </style>
 </body>
